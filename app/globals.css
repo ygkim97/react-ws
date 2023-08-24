@@ -2,26 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer utilities {
+  .hover\:bg-indigo-600:hover {
+    @apply bg-indigo-600;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .hover\:bg-green-600:hover {
+    @apply bg-green-600;
+  }
+
+  .hover\:bg-red-600:hover {
+    @apply bg-red-600;
+  }
+
+  .hover\:bg-yellow-600:hover {
+    @apply bg-yellow-600;
+  }
+
+  .hover\:bg-teal-600:hover {
+    @apply bg-teal-600;
+  }
+
+  .hover\:bg-gray-800:hover {
+    @apply bg-gray-800;
+  }
+
+  .hover\:bg-gray-300:hover {
+    @apply bg-gray-300;
+  }
+
+  .ease {
+    transition-timing-function: ease;
+  }
+
+  .focus\:outline-none:focus {
+    outline: none;
+  }
+
+  .focus\:ring {
+    ring: 3px rgba(239, 68, 68, 0.5);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.primary-button {
+  @apply border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:ring;
+}
+
+.success-button {
+  @apply border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:ring;
+}
+
+.error-button {
+  @apply border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:ring;
+}
+
+.warning-button {
+  @apply border border-yellow-500 bg-yellow-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:ring;
+}
+
+.info-button {
+  @apply border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:ring;
+}
+
+.dark-button {
+  @apply border border-gray-700 bg-gray-700 text-white rounded-md px-4 py-2 m-2 transition duration-500;
+}
+
+.light-button {
+  @apply border border-gray-200 bg-gray-200 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:ring;
 }
