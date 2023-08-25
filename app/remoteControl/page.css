@@ -1,0 +1,45 @@
+.remote-control-box {
+  @apply bg-neutral-600 rounded-md w-60 text-center mx-auto p-2 pb-0;
+  height: 650px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.button-box {
+  @apply h-full grid gap-y-1;
+}
+
+.button-group {
+  @apply grid grid-cols-3;
+}
+
+.power-button {
+  box-shadow: 3px 3px 2px rgba(220, 38, 38);
+  @apply w-16 h-16 p-0 m-auto text-white bg-red-500 rounded-md border-none ease select-none hover:bg-red-600 focus:outline-none focus:ring;
+}
+
+.remote-button {
+  box-shadow: 3px 3px 2px black;
+  @apply w-16 h-16 p-0 m-auto text-white bg-neutral-700 rounded-md border-none ease select-none hover:bg-neutral-800 focus:outline-none focus:ring;
+}
+
+.button-info-text_first {
+  @apply flex justify-between mx-2 self-end text-white font-bold text-base;
+}
+
+.button-info-text_last {
+  @apply flex justify-between mx-2 text-white font-bold text-base;
+}
+
+.logo {
+  @apply font-bold text-2xl text-white my-4 flex m-auto;
+}
+
+.grid-left {
+  @apply col-start-1 col-end-2;
+}
+.grid-center {
+  @apply col-start-2 col-end-3;
+}
+.grid-right {
+  @apply col-start-3 col-end-4;
+}
